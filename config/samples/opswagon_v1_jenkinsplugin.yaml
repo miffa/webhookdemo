@@ -1,0 +1,7 @@
+apiVersion: opswagon.xbc.io/v1
+kind: JenkinsPlugin
+metadata:
+  name: jenkinsplugin-sample
+spec:
+  # Add fields here
+  foo: bar

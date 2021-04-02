@@ -1,0 +1,24 @@
+# permissions for end users to edit jenkinsplugins.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: jenkinsplugin-editor-role
+rules:
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinsplugins
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinsplugins/status
+  verbs:
+  - get

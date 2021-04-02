@@ -1,0 +1,48 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinspipelines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinspipelines/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinsplugins
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinsplugins/status
+  verbs:
+  - get
+  - patch
+  - update

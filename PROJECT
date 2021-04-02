@@ -1,0 +1,10 @@
+domain: xbc.io
+repo: webhookdemo
+resources:
+- group: opswagon
+  kind: JenkinsPipeline
+  version: v1
+- group: opswagon
+  kind: JenkinsPlugin
+  version: v1
+version: "2"

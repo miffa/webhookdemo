@@ -1,0 +1,24 @@
+# permissions for end users to edit jenkinspipelines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: jenkinspipeline-editor-role
+rules:
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinspipelines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - opswagon.xbc.io
+  resources:
+  - jenkinspipelines/status
+  verbs:
+  - get
